@@ -29,7 +29,7 @@
 /* CODE */
 
 body {
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Kumbh Sans", sans-serif;
 
   height: 100vh;
@@ -53,6 +53,9 @@ body {
   margin-top: 75px;
 
   border-radius: 25px;
+
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .container .image__woman {
@@ -66,28 +69,41 @@ body {
 
   width: 235px;
   height: 180px;
+
+  z-index: 99;
 }
 
-.container .image__woman .bg__woman {
+.container .bg__woman {
   background: url(./images/bg-pattern-mobile.svg) no-repeat center;
 
   position: relative;
-  top: 70px;
+  top: -215px;
 
   margin: auto;
 
   width: 235px;
   height: 180px;
+
+  z-index: 98;
 }
 
 .container h1 {
   position: relative;
-  top: -50px;
+  top: -225px;
   font-size: 35px;
 }
 
 .container .q__container {
+  position: relative;
   padding: 20px;
+  top: -215px;
+}
+
+.container .q__container hr {
+  border: none;
+  border-top: 1px solid var(--Light-grayish-blue);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .container .q__container .q__row {
@@ -102,7 +118,7 @@ body {
 
 /* ATTRIBUTIONS */
 .attribution {
-  padding-top: 5px;
+  padding-top: 10px;
   font-size: 11px;
   text-align: center;
 }
