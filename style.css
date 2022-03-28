@@ -1,0 +1,111 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"); /* font-family: 'Kumbh Sans', sans-serif; */
+
+/* COLORS */
+:root {
+  /* Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+
+  /* Background Gradient */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+
+  /* Neutral - Text */
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CODE */
+
+body {
+  font-size: 14px;
+  font-family: "Kumbh Sans", sans-serif;
+
+  height: 100vh;
+
+  background-image: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 325px;
+  height: 525px;
+
+  text-align: center;
+
+  margin-top: 75px;
+
+  border-radius: 25px;
+}
+
+.container .image__woman {
+  background: url(./images/illustration-woman-online-mobile.svg) no-repeat
+    center;
+
+  position: relative;
+  top: -108px;
+
+  margin: auto;
+
+  width: 235px;
+  height: 180px;
+}
+
+.container .image__woman .bg__woman {
+  background: url(./images/bg-pattern-mobile.svg) no-repeat center;
+
+  position: relative;
+  top: 70px;
+
+  margin: auto;
+
+  width: 235px;
+  height: 180px;
+}
+
+.container h1 {
+  position: relative;
+  top: -50px;
+  font-size: 35px;
+}
+
+.container .q__container {
+  padding: 20px;
+}
+
+.container .q__container .q__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container div .answer {
+  display: none;
+}
+
+/* ATTRIBUTIONS */
+.attribution {
+  padding-top: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
