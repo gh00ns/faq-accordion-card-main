@@ -89,21 +89,21 @@ body {
 
 .container h1 {
   position: relative;
-  top: -225px;
+  top: -230px;
   font-size: 35px;
 }
 
 .container .q__container {
   position: relative;
   padding: 20px;
-  top: -215px;
+  top: -230px;
 }
 
 .container .q__container hr {
   border: none;
   border-top: 1px solid var(--Light-grayish-blue);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .container .q__container .q__row {
@@ -114,6 +114,21 @@ body {
 
 .container div .answer {
   display: none;
+
+  margin-top: 10px;
+  padding-right: 10px;
+
+  text-align: start;
+  color: var(--Dark-grayish-blue);
+
+  font-size: 11px;
+}
+
+/* HOVER STATES */
+.container .q__container .q__row:hover {
+  color: var(--Soft-red);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 /* ATTRIBUTIONS */
