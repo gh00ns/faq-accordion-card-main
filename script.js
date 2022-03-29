@@ -1,5 +1,6 @@
 // CLICKING ON Q
 var activeQ = "";
+var i;
 
 const q1 = document.getElementById("q1");
 const q2 = document.getElementById("q2");
@@ -14,17 +15,23 @@ q4.onclick = function(){qPressed("4")};
 q5.onclick = function(){qPressed("5")};
 
 function qPressed(num_string) {
+    var q_var = document.getElementById("q" + num_string);
+    var q_arrow_var = document.getElementById("q" + num_string + "_arrow");
+    var q_answer_var = document.getElementById("q" + num_string + "_answer");
+
     if (activeQ == "") {
         // set active question
-        document.getElementById("q" + num_string).style.fontWeight = 700;
-        document.getElementById("q" + num_string + "_arrow").style.transform = "rotate(180deg)";
-        document
+        q_var.style.fontWeight = 700;
+        q_arrow_var.style.transform = "rotate(180deg)";
+        q_answer_var.style.display = "block";
+        q_answer_var.style.maxHeight = q_answer_var.scrollHeight + "px";
     }
 
     else if (activeQ == num_string) {
         // reset
-        document.getElementById("q" + num_string).style.fontWeight = "";
-        document.getElementById("q" + num_string + "_arrow").style.transform = "";   
+        q_var.style.fontWeight = "";
+        q_arrow_var.style.transform = "";   
+        q_answer_var.style.maxHeight = "0px";
         num_string = "";    
     }
 
@@ -32,9 +39,12 @@ function qPressed(num_string) {
         // reset previous Q
         document.getElementById("q" + activeQ).style.fontWeight = "";
         document.getElementById("q" + activeQ + "_arrow").style.transform = "";   
+        document.getElementById("q" + activeQ + "_answer").style.maxHeight = "0px";
         // set new Q
-        document.getElementById("q" + num_string).style.fontWeight = 700;
-        document.getElementById("q" + num_string + "_arrow").style.transform = "rotate(180deg)";
+        q_var.style.fontWeight = 700;
+        q_arrow_var.style.transform = "rotate(180deg)";
+        q_answer_var.style.display = "block";
+        q_answer_var.style.maxHeight = q_answer_var.scrollHeight + "px";
     }
 
     activeQ = num_string;

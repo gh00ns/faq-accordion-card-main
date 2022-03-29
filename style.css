@@ -122,6 +122,10 @@ body {
   color: var(--Dark-grayish-blue);
 
   font-size: 11px;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
 }
 
 /* HOVER STATES */
